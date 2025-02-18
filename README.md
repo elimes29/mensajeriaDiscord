@@ -129,18 +129,48 @@ Para ejecutar las pruebas:
 ```bash
 ./mvnw test
 ```
+
 ✅ Pruebas Implementadas
 - ** Pruebas de Servicio (MensajeServicioTest)
-deberiaImprimirMensajesSiHayRecientes()
+- deberiaImprimirMensajesSiHayRecientes()
 Verifica que el servicio imprime mensajes si hay mensajes creados en el último minuto.
-deberiaImprimirSinNovedadSiNoHayMensajesRecientes()
+- deberiaImprimirSinNovedadSiNoHayMensajesRecientes()
 Verifica que el servicio no imprime nada si no hay mensajes recientes.
 - ** Pruebas de Controlador (MensajeControllerTest)
-deberiaGuardarMensajeCorrectamente()
+- deberiaGuardarMensajeCorrectamente()
 Valida que se pueda guardar un mensaje correctamente y que devuelva un código 201 (Created).
-deberiaEliminarMensajeExistente()
+- deberiaEliminarMensajeExistente()
 Verifica que se pueda eliminar un mensaje existente y que devuelva un código 200 (OK).
-deberiaRetornar404SiMensajeNoExiste()
-Verifica que al intentar eliminar un mensaje inexistente se devuelva un código 404 (Not Found).
+- deberiaRetornar404SiMensajeNoExiste()
+- Verifica que al intentar eliminar un mensaje inexistente se devuelva un código 404 (Not Found).
 
 Estas pruebas aseguran que la API funcione correctamente y detectan posibles errores en la lógica del negocio.
+
+## 🤝 Contribuciones
+¡Tu colaboración es bienvenida! Para contribuir, sigue estos pasos:
+
+- 1️⃣ Haz un fork del repositorio.
+- 2️⃣ Crea una nueva rama con tu mejora:
+
+```bash
+git checkout -b feature/mi-mejora
+```
+
+- 3️⃣ Realiza tus cambios y haz un commit:
+```bash
+git commit -m "Agregada nueva funcionalidad"
+```
+
+4️⃣ Envía tus cambios:
+```bash
+git push origin feature/mi-mejora
+```
+
+- 5️⃣ Crea un Pull Request describiendo los cambios.
+
+ ## 📬 Contacto
+Si tienes preguntas o sugerencias, puedes contactarme en:
+- GitHub: [https://github.com/elimes29]
+- LinkedIn: [https://www.linkedin.com/in/elimes-rodriguez]
+
+- ¡Gracias por visitar el proyecto!
