@@ -72,8 +72,9 @@ Esta aplicación incluye:
 - ** Clona el repositorio:
 
 ```bash
-git clone https://github.com/tu-usuario/mensajeria.git
+git clone (https://github.com/elimes29/mensajeriadiscord)
 cd mensajeria
+```
 
 - ** Configura la base de datos:
 Asegúrate de tener MySQL instalado y crea una base de datos para el proyecto. Luego, configura las credenciales en application.properties:
