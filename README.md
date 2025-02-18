@@ -69,7 +69,7 @@ Esta aplicación incluye:
 
 ## 📦 Instalación y Configuración
 
-### 1️⃣ Clona el repositorio:
+- 1️⃣ Clona el repositorio:
 
 ```bash
 git clone https://github.com/tu-usuario/mensajeria.git
