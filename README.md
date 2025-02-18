@@ -26,6 +26,7 @@ Esta aplicación incluye:
 - **Validaciones de entrada** con **Spring Validation**.
 - **Paginación** para optimizar consultas.
 - **Documentación OpenAPI** con **Springdoc**.
+- **Pruebas unitarias** con **JUnit 5 y Mockito**.
 
 ---
 
@@ -45,6 +46,9 @@ Esta aplicación incluye:
 - **📦 Persistencia de Datos**:
   - Uso de **Spring Data JPA** con **MySQL** y migraciones automáticas con **Flyway**.
 
+- **🧪 Pruebas Unitarias**:
+  - Se han implementado pruebas para garantizar la correcta funcionalidad de los servicios y controladores.
+
 ---
 
 ## 🛠️ Tecnologías Utilizadas
@@ -59,6 +63,7 @@ Esta aplicación incluye:
 - **Springdoc OpenAPI** - para generación de documentación interactiva
 - **Lombok** - para reducir el código boilerplate
 - **Maven** - para gestión de dependencias y compilación
+- **JUnit 5 y Mockito** - para pruebas unitarias
 
 ---
 
@@ -70,32 +75,3 @@ Esta aplicación incluye:
 git clone https://github.com/tu-usuario/mensajeria.git
 cd mensajeria
 
-### 1️⃣ Configura la base de datos:
-Asegúrate de tener MySQL instalado y crea una base de datos para el proyecto. Luego, configura las credenciales en application.properties:
-
-spring.datasource.url=jdbc:mysql://localhost:3306/mensajeriaDB
-spring.datasource.username=tu_usuario
-spring.datasource.password=tu_contraseña
-spring.datasource.driver-class-name=com.mysql.cj.jdbc.Driver
-
-# Configuración de Flyway para migraciones
-spring.flyway.enabled=true
-spring.flyway.baseline-on-migrate=true
-
-📑 Documentación de la API
-La documentación de la API REST está disponible a través de Swagger/OpenAPI en:
-
-📌 Swagger UI: http://localhost:8080/swagger-ui/index.html
-
-En esta interfaz interactiva podrás explorar y probar los endpoints de la API.
-
-🖥️ Uso de la Aplicación
-📄 Rutas Disponibles
-POST /mensajes - Crear un nuevo mensaje.
-GET /mensajes - Listar mensajes con paginación.
-DELETE /mensajes/{id} - Eliminar un mensaje por ID.
-📬 Contacto
-Si tienes preguntas o sugerencias, puedes contactarme en:
-
-GitHub: https://github.com/elimes29
-LinkedIn: Elimes Rodríguez
