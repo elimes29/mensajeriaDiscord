@@ -69,9 +69,22 @@ Esta aplicación incluye:
 
 ## 📦 Instalación y Configuración
 
-- 1️⃣ Clona el repositorio:
+- ** Clona el repositorio:
 
 ```bash
 git clone https://github.com/tu-usuario/mensajeria.git
 cd mensajeria
+
+- ** Configura la base de datos:
+Asegúrate de tener MySQL instalado y crea una base de datos para el proyecto. Luego, configura las credenciales en application.properties:
+
+```bash
+spring.datasource.url=jdbc:mysql://localhost:3306/mensajeriaDB
+spring.datasource.username=tu_usuario
+spring.datasource.password=tu_contraseña
+spring.datasource.driver-class-name=com.mysql.cj.jdbc.Driver
+
+# Configuración de Flyway para migraciones
+spring.flyway.enabled=true
+spring.flyway.baseline-on-migrate=true
 
