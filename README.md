@@ -77,6 +77,7 @@ cd mensajeria
 ```
 
 - ** Configura la base de datos:
+
 Asegúrate de tener MySQL instalado y crea una base de datos para el proyecto. Luego, configura las credenciales en application.properties:
 
 ```bash
@@ -88,4 +89,58 @@ spring.datasource.driver-class-name=com.mysql.cj.jdbc.Driver
 # Configuración de Flyway para migraciones
 spring.flyway.enabled=true
 spring.flyway.baseline-on-migrate=true
+```
 
+- **Ejecuta el proyecto:
+
+Compila y ejecuta la aplicación con Maven:
+
+```bash
+./mvnw spring-boot:run
+```
+
+## 📑 Documentación de la API
+La documentación de la API REST está disponible a través de Swagger/OpenAPI en:
+
+📌 Swagger UI: http://localhost:8080/swagger-ui/index.html
+
+En esta interfaz interactiva podrás explorar y probar los endpoints de la API.
+
+## 🖥️ Uso de la Aplicación
+
+📄 Rutas Disponibles
+POST /mensajes - Crear un nuevo mensaje.
+GET /mensajes - Listar mensajes con paginación.
+DELETE /mensajes/{id} - Eliminar un mensaje por ID.
+
+🌐 Ejemplo de Petición
+Crear un mensaje:
+```bash
+curl -X POST -H "Content-Type: application/json" -d '{
+  "mensaje": "Hola, este es un mensaje programado",
+  "fecha": "2024-02-17T10:30:00"
+}' http://localhost:8080/mensajes
+```
+
+## 🧪 Pruebas
+Se han implementado pruebas unitarias utilizando JUnit 5 y Mockito para validar la lógica de negocio y los controladores de la API.
+
+Para ejecutar las pruebas:
+```bash
+./mvnw test
+```
+✅ Pruebas Implementadas
+- ** Pruebas de Servicio (MensajeServicioTest)
+deberiaImprimirMensajesSiHayRecientes()
+Verifica que el servicio imprime mensajes si hay mensajes creados en el último minuto.
+deberiaImprimirSinNovedadSiNoHayMensajesRecientes()
+Verifica que el servicio no imprime nada si no hay mensajes recientes.
+- ** Pruebas de Controlador (MensajeControllerTest)
+deberiaGuardarMensajeCorrectamente()
+Valida que se pueda guardar un mensaje correctamente y que devuelva un código 201 (Created).
+deberiaEliminarMensajeExistente()
+Verifica que se pueda eliminar un mensaje existente y que devuelva un código 200 (OK).
+deberiaRetornar404SiMensajeNoExiste()
+Verifica que al intentar eliminar un mensaje inexistente se devuelva un código 404 (Not Found).
+
+Estas pruebas aseguran que la API funcione correctamente y detectan posibles errores en la lógica del negocio.
